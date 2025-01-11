@@ -11,8 +11,6 @@ This project aims to:
 
 1) Learn how to use **React Router** to manage routing and navigation in a React app.
 2) Understand concepts like dynamic routes, nested routes, and route parameters.
-3) Build an interactive web application with smooth transitions between pages and dynamic data rendering.
-4) Apply frontend development best practices when working with routing.
 
 # Features
 - 📚 Display a library of books.
