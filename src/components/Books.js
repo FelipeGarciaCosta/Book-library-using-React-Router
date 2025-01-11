@@ -1,8 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { BookContext } from "../BookContext";
+import { useLocation } from "react-router-dom";
+
 
 export default function Books() {
     const books = useContext(BookContext);
+    const query = new URLSearchParams(useLocation().search); // get the query string from the URL
+    //the serach property of the location object contains the query string from the URL
+
+    const search = query.get("search") || "";
+
 
     return (
         <div>
