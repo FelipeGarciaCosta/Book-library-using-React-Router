@@ -9,13 +9,14 @@ export default function Books() {
     //the serach property of the location object contains the query string from the URL
 
     const search = query.get("search") || "";
-
+    const filteredBooks = books.filter((book) =>
+        book.title.toLowerCase().includes(search.toLowerCase()));
 
     return (
         <div>
             <h1>All Books</h1>
             <ul>
-                {books.map((book) => (
+                {filteredBooks.map((book) => (
                     <li key={book.id}>{book.title} by {book.author}</li>
                 ))}
             </ul>
